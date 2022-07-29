@@ -25,10 +25,23 @@
 
 ### Ejercicios
 
-- [Tema 1](https://github.com/JMPinillos/JMPinillos.github.io/blob/main/RESUMENES_INGENIERIA-INFORMATICA/2-Curso/Segundo%20cuatrimestre/Programaci%C3%B3n%20avanzada/Ejercicios/Tema%201.html)
-- Tema 2
-- Tema 3
-- Tema 4
+<table>  
+	<tr style="background-color: rgb(0, 147, 255);">
+    	<th width="60%" style="color:#FFFFFF">EJERCICIOS</th>
+	</tr>   
+    <tr>
+		<td><a href="2-Curso/Segundo_cuatrimestre/Programacion_avanzada/Ejercicios/Tema 1.html">Tema 1</a></td>
+    </tr>
+    <tr>    
+		<td><a href="2-Curso/Segundo_cuatrimestre/Programacion_avanzada/Ejercicios/Tema 2.html">Tema 2</a></td>
+    </tr>
+		<td><a href="2-Curso/Segundo_cuatrimestre/Programacion_avanzada/Ejercicios/Tema 3.html">Tema 3</a></td>
+    </tr>
+    <tr>    
+		<td><a href="2-Curso/Segundo_cuatrimestre/Programacion_avanzada/Ejercicios/Tema 4.html">Tema 4</a></td>
+    </tr>    
+    <tr>        
+</table> 
 
 
 
