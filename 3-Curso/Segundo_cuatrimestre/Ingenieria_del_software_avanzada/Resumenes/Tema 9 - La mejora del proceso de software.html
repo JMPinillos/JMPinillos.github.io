@@ -590,9 +590,81 @@ header, .context-menu, .megamenu-content, footer{
 
 
 
-</style><title>Tema 9 - Introducción a los computadores paralelos</title>
+</style><title>Tema 9 - La mejora del proceso de software</title>
 </head>
 <body class='typora-export os-windows'><div class='typora-export-content'>
-<div id='write'  class=''><h1 id='introducción-a-los-computadores-paralelos'><span>Introducción a los computadores paralelos</span></h1><h2 id='introducción'><span>Introducción</span></h2><p><span>La programación paralela consiste en usar varios procesadores trabajando juntos para resolver una tarea común.</span></p><ul><li><span>Cada procesador trabaja en una porción del problema.</span></li><li><span>Los procesos pueden </span><strong><span>intercambiar datos</span></strong><span>, a través de la </span><strong><span>memoria</span></strong><span> o por una </span><strong><span>red de interconexión</span></strong><span>.</span></li></ul><p><span>La programación paralela permite:</span></p><ul><li><span>Resolver problemas mayores.</span></li><li><span>Resolver los problemas más rapidamente.</span></li><li><span>Resolver problemas más grandes.</span></li></ul><p>&nbsp;</p><h2 id='procesadores-paralelos'><span>Procesadores paralelos</span></h2><h3 id='tipos-de-procesadores-paralelos'><span>Tipos de procesadores paralelos</span></h3><h4 id='multiprocesador-memoria-compartida'><span>Multiprocesador (memoria compartida)</span></h4><p><span>Todos los procesadores tienen acceso a la memoria a través de una red de conexión.</span></p><p><img src="images/Multiprocesador.png" alt="Multiprocesador" style="zoom: 50%;" /></p><p>&nbsp;</p><h5 id='uma-acceso-a-memoria-uniforme'><span>UMA (Acceso a memoria uniforme)</span></h5><p><strong><span>La memoria física es uniformemente compartida por todos los procesadores.</span></strong></p><p><span>Todos los procesadores tienen el mismo tiempo de acceso a la memoria. </span></p><p><strong><span>Cada procesador tiene su propia caché privada y también se comparten los periféricos.</span></strong></p><p>&nbsp;</p><h5 id='numa-acceso-a-memoria-no-uniforme'><span>NUMA (Acceso a memoria no uniforme)</span></h5><p><span>Existen </span><strong><span>memorias locales asociadas a cada procesador y estos pueden acceder a datos de su memoria local de una manera más rápida que a las memorias de otros procesadores</span></strong><span>.</span></p><p>&nbsp;</p><h4 id='multicomputador-memoria-distribuida'><span>Multicomputador (memoria distribuida)</span></h4><p><span>Cada procesador tiene su propia memoria local.</span></p><p><img src="images/Multicomputador.png" alt="Multicomputador" style="zoom: 50%;" /></p><ul><li><span>Se pueden ver como un computador paralelo en el cual </span><strong><span>cada procesador tiene su propia memoria local</span></strong><span>.</span></li><li><span>En estos sistemas la </span><strong><span>memoria se encuentra distribuida y no compartida como en los sistemas multiprocesador</span></strong><span>.</span></li><li><span>Los computadores se comunican a través de </span><strong><span>paso de mensajes</span></strong><span>.</span></li><li><strong><span>Sólo tienen acceso directo a su memoria local</span></strong><span> y no a las memorias del resto de procesadores.</span></li></ul><p>&nbsp;</p><footer><center>by <strong>Jose Manuel Pinillos</strong> &amp; <strong>Alberto de la Serna</strong></center></footer></div></div>
+<div id='write'  class=''><h1 id='la-mejora-del-proceso-de-software'><span>La mejora del proceso de software</span></h1><p><span>La mejora del proceso del software es un conjunto de actividades que buscan optimizar procesos de construcción de software con el objetivo de obtener un producto de mayor calidad, más rápidamente y con menor coste.</span></p><p><span>Estas actividades pueden seguir dos enfoques posibles:</span></p><table>  
+	<tbody><tr style="background-color: rgb(0, 147, 255);">
+	  <th width="50%" style="color:#FFFFFF"><center>MADUREZ DE PROCESOS<center></center></center></th> 
+	  <th width="50%" style="color:#FFFFFF"><center>ENFOQUE ÁGIL<center></center></center></th>       
+	</tr>
+  <tr>
+    <td>- Busca introducir buenas prácticas.<br>
+      - El <strong>nivel de capacidad</strong> de un proceso indica en qué medida incluye estas buenas prácticas.<br>
+  - Se basa en planes muy precisos y controlados.<br>
+  - Tiene una aparente sobrecarga de trabajo.</td>
+    <td>- Adoptan enfoques iterativos del proceso y se centran en la entrega temprana y rápida de funcionalidades, con el objetivo de obtener retroalimentación del cliente que repercutira en la calidad del producto.<br>
+      - Elimina la carga burocratica y se centra en el desarrollo.</td>
+	</tr>
+</tbody></table><p>&nbsp;</p><h2 id='actividades-fundamentales-de-mejora-de-procesos'><span>Actividades fundamentales de mejora de procesos</span></h2><p><span>Las actividades fundamentales se dividen en tres etapas:</span></p><p><img src="images/Proceso_mejora_procesos.png" alt="Proceso_mejora_procesos" style="zoom:75%;" /></p><ul><li><p><strong style="color:red">Medición</strong><strong> del proceso:</strong> Definir métricas adecuadas para valorar el proceso (Tiempo, recursos, tasa de ocurrencia...).</p><p><span>Para la definición de métricas podemos utilizar el </span><strong><span>CQM (Goal-Question-Metric)</span></strong><span>:</span></p><ul><li><strong><span>Meta:</span></strong><span> Objetivos a alcanzar.</span></li><li><strong><span>Preguntas:</span></strong><span> Areas de incertidumbre de las metas.</span></li><li><strong><span>Métricas:</span></strong><span> Conjunto de medidas concretas.</span></li></ul><p>&nbsp;</p></li><li><p><strong style="color:green">Análisis</strong><strong> del proceso:</strong> Identificar fortalezas y debilidades.</p><p><span>Se evaluan las características clave del proceso y cómo lo realizan las personas:</span></p><ul><li><strong><span>Comunicaciones:</span></strong><span> problemas de gestión de información.</span></li><li><strong><span>Aprendizaje:</span></strong><span> Existencia de manuales y formación.</span></li><li><strong><span>Prácticas:</span></strong><span> Si existen y cómo se utilizan.</span></li><li><strong><span>Herramientas:</span></strong><span> Valorar si son las más adecuadas.</span></li></ul><p>&nbsp;</p></li><li><p><strong style="color:blue">Cambio</strong><strong> del proceso:</strong> Introducir los cambios en el proceso para mejorarlo. </p><p><img src="images/Cambios_procesos.png" referrerpolicy="no-referrer" alt="Cambios_procesos"></p></li></ul><p>&nbsp;</p><h2 id='modelo-cmmi-capability-maturity-model-integration'><span>Modelo CMMI (Capability Maturity Model Integration)</span></h2><p><span>El </span><strong><span>Modelo de Madurez de Capacidades Integrado</span></strong><span> surge como evolución del Modelo de Madruez de Capacidades de Software (CMM-SW) integrando en un único marco las disciplinas de </span><em><strong><span>Software</span></strong></em><span> y </span><em><strong><span>Sistemas</span></strong></em><span>.</span></p><p><span>Hay dos tipos de representaciones del modelo CMMI:</span></p><h3 id='niveles-de-capacidad'><span>Niveles de capacidad</span></h3><table>  
+	<tbody><tr>
+	  <th colspan="3" style="background-color:darkgreen;color:#FFFFFF"><center>CONTINUA<center></center></center></th> 
+	</tr>  
+	<tr>
+	  <th colspan="3"><center>4 niveles de capacidad<center></center></center></th> 
+	</tr>       
+	<tr>
+	  <td width="05%" style="background-color:darkblue;color:#FFFFFF"><strong></strong><center><strong>3</strong><center><strong></strong></center></center></td> 
+	  <td width="23%" style="background-color:rgb(0, 147, 255);color:#FFFFFF"><strong>DEFINIDO</strong></td>
+    <td width="72%">Los procesos están <strong style="color:red">institucionalizados</strong>.</td>
+	</tr>
+  	<tr>
+	  <td width="05%" style="background-color:darkblue;color:#FFFFFF"><strong></strong><center><strong>2</strong><center><strong></strong></center></center></td> 
+	  <td width="23%" style="background-color:rgb(0, 147, 255);color:#FFFFFF"><strong>GESTIONADO</strong></td>
+    <td width="72%">Los procesos gestionados <strong style="color:red">se planifican y ejecutan de acuerdo con la política</strong>.</td>
+	</tr>
+	<tr>
+	  <td width="05%" style="background-color:darkblue;color:#FFFFFF"><strong></strong><center><strong>1</strong><center><strong></strong></center></center></td> 
+	  <td width="23%" style="background-color:rgb(0, 147, 255);color:#FFFFFF"><strong>REALIZADO</strong></td>
+    <td width="72%">Los procesos existen y <strong style="color:red">se logran todas las metas especificas</strong> de ese área.</td>
+	</tr>
+	<tr>
+	  <td width="05%" style="background-color:darkblue;color:#FFFFFF"><strong></strong><center><strong>0</strong><center><strong></strong></center></center></td> 
+	  <td width="23%" style="background-color:rgb(0, 147, 255);color:#FFFFFF"><strong>INCOMPLETO</strong></td>
+    <td width="72%"><strong style="color:red">El area de proceso no existe o no logra las metas específicas</strong>.</td>
+	</tr>      
+</tbody></table><p>&nbsp;</p><h3 id='niveles-de-madurez'><span>Niveles de madurez</span></h3><table>
+	<tbody><tr>
+	  <th colspan="3" style="background-color:darkgreen;color:#FFFFFF"><center>POR ETAPAS<center></center></center></th> 
+	</tr>  
+	<tr>
+	  <th colspan="3"><center>5 niveles de madurez<center></center></center></th> 
+	</tr>      
+	<tr>
+	  <td width="05%" style="background-color:darkblue;color:#FFFFFF"><strong></strong><center><strong>5</strong><center><strong></strong></center></center></td> 
+	  <td width="23%" style="background-color:rgb(0, 147, 255);color:#FFFFFF"><strong>EN OPTIMIZACIÓN</strong></td>
+    <td width="72%">La organización optimiza sus procesos centrandose en la <strong style="color:red">adaptación y mejora continua</strong>.</td>
+	</tr>      
+	<tr>
+	  <td width="05%" style="background-color:darkblue;color:#FFFFFF"><strong></strong><center><strong>4</strong><center><strong></strong></center></center></td> 
+	  <td width="23%" style="background-color:rgb(0, 147, 255);color:#FFFFFF"><strong>GESTIONADO CUANTITATIVAMENTE</strong></td>
+    <td width="72%">La organización y los proyectos establecen <strong style="color:red">objetivos cuantitativos</strong>.</td>
+	</tr> 	
+  <tr>
+	  <td width="05%" style="background-color:darkblue;color:#FFFFFF"><strong></strong><center><strong>3</strong><center><strong></strong></center></center></td> 
+	  <td width="23%" style="background-color:rgb(0, 147, 255);color:#FFFFFF"><strong>DEFINIDO</strong></td>
+    <td width="72%">Los procesos están <strong style="color:red">definidos</strong> y existen procedimientos para adaptarlos a diferentes proyectos.</td>
+	</tr>
+  	<tr>
+	  <td width="05%" style="background-color:darkblue;color:#FFFFFF"><strong></strong><center><strong>2</strong><center><strong></strong></center></center></td> 
+	  <td width="23%" style="background-color:rgb(0, 147, 255);color:#FFFFFF"><strong>GESTIONADO</strong></td>
+    <td width="72%">Los procesos son gestionados y <strong style="color:red">existe una disciplina</strong> que permite repetir los éxitos.</td>
+	</tr>
+	<tr>
+	  <td width="05%" style="background-color:darkblue;color:#FFFFFF"><strong></strong><center><strong>1</strong><center><strong></strong></center></center></td> 
+	  <td width="23%" style="background-color:rgb(0, 147, 255);color:#FFFFFF"><strong>INICIAL</strong></td>
+    <td width="72%">Los procesos son apropiados y caóticos, dependiendo el exito de la competencia del equipo.</td>
+	</tr>
+</tbody></table>      <p>&nbsp;</p><h3 id='continua-vs-etapas'><span>Continua VS Etapas</span></h3><p><strong><span>Continua:</span></strong><span> es más flexible y asequible para organizaciones pequeñas.</span></p><p><strong><span>Por etapas:</span></strong><span> define una ruta de mejora clara pero es demasiado rígida.</span></p><p>&nbsp;</p><footer><center>by <strong>Jose Manuel Pinillos</strong> &amp; <strong>Alberto de la Serna</strong></center></footer></div></div>
 </body>
 </html>

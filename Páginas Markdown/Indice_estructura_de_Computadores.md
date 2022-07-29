@@ -36,8 +36,6 @@
 		<td><a href="Resumenes/Fórmulas">Fórmulas</a></td>
 	</tr>    
 </table> 
-
-
   
 
 <table>  
@@ -51,8 +49,6 @@
 		<td><a href="Tipo examen">Tipo examen</a></td>
     </tr>          
 </table> 
-
-
 
 
 <table>  

@@ -16,10 +16,10 @@
 		<td><a href="Resumenes/Tema 4 - Gestión de errores mediante excepciones.html">Tema 4 - Gestión de errores mediante excepciones</a></td>
     </tr>    
     <tr>    
-		<td><a href="Tema 5 y 6 - Interfaces Gráficas de usuario.html">Tema 5 y 6 - Interfaces Gráficas de usuario</a></td>
+		<td><a href="Resumenes/Tema 5 y 6 - Interfaces Gráficas de usuario.html">Tema 5 y 6 - Interfaces Gráficas de usuario</a></td>
     </tr>    
     <tr>    
-		<td><a href="Tema 7 y 8 - Introducción a la programación concurrente.html">Tema 7 y 8 - Introducción a la programación concurrente</a></td>
+		<td><a href="Resumenes/Tema 7 y 8 - Introducción a la programación concurrente">Tema 7 y 8 - Introducción a la programación concurrente</a></td>
 	</tr>
 </table> 
 
@@ -41,7 +41,6 @@
 		<td><a href="Ejercicios/Tema 4.html">Tema 4</a></td>
     </tr>           
 </table> 
-
 
 
 <table>  

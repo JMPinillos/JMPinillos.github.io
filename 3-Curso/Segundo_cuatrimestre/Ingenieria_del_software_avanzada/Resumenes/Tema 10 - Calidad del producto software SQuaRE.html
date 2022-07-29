@@ -590,9 +590,77 @@ header, .context-menu, .megamenu-content, footer{
 
 
 
-</style><title>Tema 9 - Introducción a los computadores paralelos</title>
+</style><title>Tema 10 - Calidad del producto software SQuaRE</title>
 </head>
 <body class='typora-export os-windows'><div class='typora-export-content'>
-<div id='write'  class=''><h1 id='introducción-a-los-computadores-paralelos'><span>Introducción a los computadores paralelos</span></h1><h2 id='introducción'><span>Introducción</span></h2><p><span>La programación paralela consiste en usar varios procesadores trabajando juntos para resolver una tarea común.</span></p><ul><li><span>Cada procesador trabaja en una porción del problema.</span></li><li><span>Los procesos pueden </span><strong><span>intercambiar datos</span></strong><span>, a través de la </span><strong><span>memoria</span></strong><span> o por una </span><strong><span>red de interconexión</span></strong><span>.</span></li></ul><p><span>La programación paralela permite:</span></p><ul><li><span>Resolver problemas mayores.</span></li><li><span>Resolver los problemas más rapidamente.</span></li><li><span>Resolver problemas más grandes.</span></li></ul><p>&nbsp;</p><h2 id='procesadores-paralelos'><span>Procesadores paralelos</span></h2><h3 id='tipos-de-procesadores-paralelos'><span>Tipos de procesadores paralelos</span></h3><h4 id='multiprocesador-memoria-compartida'><span>Multiprocesador (memoria compartida)</span></h4><p><span>Todos los procesadores tienen acceso a la memoria a través de una red de conexión.</span></p><p><img src="images/Multiprocesador.png" alt="Multiprocesador" style="zoom: 50%;" /></p><p>&nbsp;</p><h5 id='uma-acceso-a-memoria-uniforme'><span>UMA (Acceso a memoria uniforme)</span></h5><p><strong><span>La memoria física es uniformemente compartida por todos los procesadores.</span></strong></p><p><span>Todos los procesadores tienen el mismo tiempo de acceso a la memoria. </span></p><p><strong><span>Cada procesador tiene su propia caché privada y también se comparten los periféricos.</span></strong></p><p>&nbsp;</p><h5 id='numa-acceso-a-memoria-no-uniforme'><span>NUMA (Acceso a memoria no uniforme)</span></h5><p><span>Existen </span><strong><span>memorias locales asociadas a cada procesador y estos pueden acceder a datos de su memoria local de una manera más rápida que a las memorias de otros procesadores</span></strong><span>.</span></p><p>&nbsp;</p><h4 id='multicomputador-memoria-distribuida'><span>Multicomputador (memoria distribuida)</span></h4><p><span>Cada procesador tiene su propia memoria local.</span></p><p><img src="images/Multicomputador.png" alt="Multicomputador" style="zoom: 50%;" /></p><ul><li><span>Se pueden ver como un computador paralelo en el cual </span><strong><span>cada procesador tiene su propia memoria local</span></strong><span>.</span></li><li><span>En estos sistemas la </span><strong><span>memoria se encuentra distribuida y no compartida como en los sistemas multiprocesador</span></strong><span>.</span></li><li><span>Los computadores se comunican a través de </span><strong><span>paso de mensajes</span></strong><span>.</span></li><li><strong><span>Sólo tienen acceso directo a su memoria local</span></strong><span> y no a las memorias del resto de procesadores.</span></li></ul><p>&nbsp;</p><footer><center>by <strong>Jose Manuel Pinillos</strong> &amp; <strong>Alberto de la Serna</strong></center></footer></div></div>
+<div id='write'  class=''><h1 id='calidad-del-producto-software-square'><span>Calidad del producto software: SQuaRE</span></h1><h2 id='procesos-relacionados-con-la-calidad'><span>Procesos relacionados con la calidad</span></h2><p><span>Relación entre la calidad del proceso, la calidad interna, la calidad externa y la calidad en uso del producto software:</span></p><p><img src="images/Calidad_software.png" referrerpolicy="no-referrer" alt="Calidad_software"></p><p><span>Mientras que los tres primeros elementos son controlables por el proveedor o fabricante del producto, la calidad en uso depende de la percepción que el usuario tiene durante su utilización.</span></p><p><span>Cuando construimos software, intentamos que la mejora del </span><strong><span>proceso</span></strong><span> repercuta en la </span><strong><span>calidad interna</span></strong><span>, que esta a su vez lo haga en la </span><strong><span>calidad externa</span></strong><span>, y que finalmente la </span><strong><span>calidad en uso</span></strong><span> para cada uno de los contextos de uso sea buena.</span></p><p>&nbsp;</p><h2 id='isoiec-25012-la-calidad-de-los-datos'><span>ISO/IEC 25012: la calidad de los datos</span></h2><p><span>La calidad de los datos viene determinada por el grado en que satisfacen sus propios requisitos.</span></p><p><span>El modelo de calidad de datos está compuesto por un total de </span><strong><span>15 características</span></strong><span> que se clasifican en </span><strong><span>2 grandes categorías</span></strong><span>:</span></p><ul><li><strong><span>Calidad de datos inherente:</span></strong><span> grado en que las características de los datos tienen potencial intrínseco para satisfacer las necesidades del sistema.</span></li><li><strong><span>Calidad de datos dependiente del sistema:</span></strong><span> grado en que la calidad de los datos es alcanzada y preservada durante su utilización en un sistema informático. Depende del dominio tecnológico de uso y de las capacidades de los componentes del sistema.</span></li></ul><table>  
+	<tbody><tr>
+	  <th colspan="2" style="background-color:rgb(0, 147, 255);color:#FFFFFF"><center>Características que determinan la calidad inherente<center></center></center></th> 
+	</tr> 
+	<tr>
+	  <td width="20%"><strong>Exactitud</strong></td> 
+	  <td width="80%">Grado en que los datos representan correctamente el verdadero valor del atributo que representan.</td>
+	</tr>        
+    <tr>
+	  <td width="20%"><strong>Completitud</strong></td> 
+	  <td width="80%">Grado en que los datos asociados a la entidad representada tienen valores para todos los atributos.</td>
+	</tr>  
+	<tr>
+	  <td width="20%"><strong>Consistencia</strong></td> 
+	  <td width="80%">Grado en que los datos no se contradicen entre sí y son coherentes con otros datos.</td>
+	</tr>        
+    <tr>
+	  <td width="20%"><strong>Credibilidad</strong></td> 
+	  <td width="80%">Grado en que los datos almacenan valores verdaderos y creíbles.</td>
+	</tr>     
+    <tr>
+	  <td width="20%"><strong>Actualidad</strong></td> 
+	  <td width="80%">Grado en que los datos representan el verdadero valor de la entidad representada en un momento dado.</td>
+	</tr>               
+	<tr>
+</tr></tbody></table><table>
+	  <tbody><tr><th colspan="2" style="background-color:rgb(0, 147, 255);color:#FFFFFF"><center>Características que determinan la calidad dependiente del sistema<center></center></center></th> 
+	</tr>            
+	<tr>
+	  <td width="20%"><strong>Accesibilidad</strong></td> 
+	  <td width="80%">Grado en que resulta fácil consultar los datos en un contexto de uso.</td>
+	</tr>        
+    	<tr>
+	  <td width="20%"><strong>Conformidad</strong></td> 
+	  <td width="80%">Grado en que los atributos de los datos se adhieren a convenciones, normativas o estándares vigentes.</td>
+	</tr>  
+	<tr>
+	  <td width="20%"><strong>Confidencialidad</strong></td> 
+	  <td width="80%">Grado en que se garantiza que solo acceden a los datos los usuarios autorizados.</td>
+	</tr>        
+    	<tr>
+	  <td width="20%"><strong>Eficiencia</strong></td> 
+	  <td width="80%">Grado en que el procesamiento de los datos es posible según el nivel de rendimiento esperado.</td>
+	</tr>     
+    	<tr>
+	  <td width="20%"><strong>Precisión</strong></td> 
+	  <td width="80%">Grado en que los datos proporcionan el nivel de exactitud necesario para el uso específico.</td>
+	</tr>               
+	<tr>
+	  <td width="20%"><strong>Trazabilidad</strong></td> 
+	  <td width="80%">Grado en que la manera de acceder a los datos o sus modificaciones puede ser determinada o auditada.</td>
+	</tr>        
+    	<tr>
+	  <td width="20%"><strong>Comprensibilidad</strong></td> 
+	  <td width="80%">Grado en que los valores de lo datos pueden ser interpretados y expresados mediente el lenguaje.</td>
+	</tr>  
+	<tr>
+	  <td width="20%"><strong>Disponibilidad</strong></td> 
+	  <td width="80%">Grado en el que es posible acceder a los datos según se necesitan.</td>
+	</tr>        
+   	 <tr>
+	  <td width="20%"><strong>Portabilidad</strong></td> 
+	  <td width="80%">Grado en que es posible transferir los datos de un sistema a otro.</td>
+	</tr>     
+    	<tr>
+	  <td width="20%"><strong>Recuperabilidad</strong></td> 
+	  <td width="80%">Grado en que es posible mantener un cierto nivel de calidad en los datos a través del tiempo.</td>
+	</tr>                  
+</tbody></table><p>&nbsp;</p><footer><center>by <strong>Jose Manuel Pinillos</strong> &amp; <strong>Alberto de la Serna</strong></center></footer></div></div>
 </body>
 </html>
