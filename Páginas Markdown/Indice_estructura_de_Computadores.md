@@ -46,9 +46,10 @@
 		<td><a href="Ejercicios/Evaluación de prestaciones">Evaluación de prestaciones</a></td>
     </tr>
     <tr>    
-		<td><a href="Tipo examen">Tipo examen</a></td>
+		<td><a href="Ejercicios/Tipo examen">Tipo examen</a></td>
     </tr>          
 </table> 
+
 
 
 <table>  
