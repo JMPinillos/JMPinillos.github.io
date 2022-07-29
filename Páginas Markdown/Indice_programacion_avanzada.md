@@ -11,15 +11,16 @@
 		<td><a href="https://jmpinillos.github.io/2-Curso/Segundo_cuatrimestre/Programacion_avanzada/Resumenes/Tema 1 - Introducción a la programación orientada a objetos (POO).html">Tema 2 y 3 - Relaciones entre clases</a></td>
     </tr>    
     <tr>    
-		<td><a href="2-Curso/Segundo_cuatrimestre/Programacion_avanzada/Resumenes/Tema_4.html">Tema 4 - Gestión de errores mediante excepciones</a></td>
+		<td><a href="/Resumenes/Tema 1 - Introducción a la programación orientada a objetos (POO).html">Tema 4 - Gestión de errores mediante excepciones</a></td>
     </tr>    
     <tr>    
-		<td><a href="2-Curso/Segundo_cuatrimestre/Programacion_avanzada/Resumenes/Tema_5-6.html">Tema 5 y 6 - Interfaces Gráficas de usuario</a></td>
+		<td><a href="Resumenes/Tema 1 - Introducción a la programación orientada a objetos (POO).html">Tema 5 y 6 - Interfaces Gráficas de usuario</a></td>
     </tr>    
     <tr>    
 		<td><a href="2-Curso/Segundo_cuatrimestre/Programacion_avanzada/Resumenes/Tema_7-8.html">Tema 7 y 8 - Introducción a la programación concurrente</a></td>
 	</tr>
 </table> 
+
 
 
 
