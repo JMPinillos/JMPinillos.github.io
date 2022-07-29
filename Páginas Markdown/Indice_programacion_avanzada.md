@@ -23,8 +23,6 @@
 
 
 
-
-
 ### Ejercicios
 
 - [Tema 1](https://github.com/JMPinillos/JMPinillos.github.io/blob/main/RESUMENES_INGENIERIA-INFORMATICA/2-Curso/Segundo%20cuatrimestre/Programaci%C3%B3n%20avanzada/Ejercicios/Tema%201.html)
