@@ -5,7 +5,7 @@
     	<th width="60%" style="color:#FFFFFF">RESUMENES</th>
 	</tr>   
     <tr>
-		<td><a href="2-Curso/Segundo_cuatrimestre/Programacion_avanzada/Resumenes/Tema_1.html">Tema 1 - Introducción a la programación orientada a objetos (POO)</a></td>
+		<td><a href="/Resumenes/Tema 1 - Introducción a la programación orientada a objetos (POO).html">Tema 1 - Introducción a la programación orientada a objetos (POO)</a></td>
     </tr>
     <tr>    
 		<td><a href="2-Curso/Segundo_cuatrimestre/Programacion_avanzada/Resumenes/Tema_2-3.html">Tema 2 y 3 - Relaciones entre clases</a></td>
@@ -23,28 +23,29 @@
 
 
 
-### Ejercicios
-
 <table>  
 	<tr style="background-color: rgb(0, 147, 255);">
     	<th width="60%" style="color:#FFFFFF">EJERCICIOS</th>
 	</tr>   
     <tr>
-		<td><a href="2-Curso/Segundo_cuatrimestre/Programacion_avanzada/Ejercicios/Tema 1.html">Tema 1</a></td>
+		<td><a href="2-Curso/Segundo_cuatrimestre/Programacion_avanzada/Ejercicios/Tema_1.html">Tema 1</a></td>
     </tr>
     <tr>    
-		<td><a href="2-Curso/Segundo_cuatrimestre/Programacion_avanzada/Ejercicios/Tema 2.html">Tema 2</a></td>
+		<td><a href="2-Curso/Segundo_cuatrimestre/Programacion_avanzada/Ejercicios/Tema_2.html">Tema 2</a></td>
     </tr>
-		<td><a href="2-Curso/Segundo_cuatrimestre/Programacion_avanzada/Ejercicios/Tema 3.html">Tema 3</a></td>
+		<td><a href="2-Curso/Segundo_cuatrimestre/Programacion_avanzada/Ejercicios/Tema_3.html">Tema 3</a></td>
     </tr>
     <tr>    
-		<td><a href="2-Curso/Segundo_cuatrimestre/Programacion_avanzada/Ejercicios/Tema 4.html">Tema 4</a></td>
-    </tr>    
-    <tr>        
+		<td><a href="2-Curso/Segundo_cuatrimestre/Programacion_avanzada/Ejercicios/Tema_4.html">Tema 4</a></td>
+    </tr>           
 </table> 
 
 
-
-### Preparación examen
-
-- Preparación examen
+<table>  
+	<tr style="background-color: rgb(0, 147, 255);">
+    	<th width="60%" style="color:#FFFFFF">PREPARACIÓN EXAMEN</th>
+	</tr>   
+    <tr>
+		<td><a href="2-Curso/Segundo_cuatrimestre/Programacion_avanzada/Ejercicios/Preparacion_examen.html">Preparación Examen</a></td>
+    </tr>      
+</table> 
