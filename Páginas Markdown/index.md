@@ -142,7 +142,7 @@ Aquí encontraras los resúmenes para que comprendas los conceptos esenciales de
     	<td>Obligatoria</td>
     </tr>    
     <tr>    
-        <td><a href="prueba/Programacion_avanzada.html">Estructura de Computadores</a></td>
+        <td><a href="2-Curso/Segundo_cuatrimestre/Estructura_de_computadores/Indice_estructura_de_Computadores.html">Estructura de Computadores</a></td>
 		<td><center>6<center></td>
     	<td>Obligatoria</td>
     </tr>    
@@ -157,6 +157,7 @@ Aquí encontraras los resúmenes para que comprendas los conceptos esenciales de
     	<td>Obligatoria</td>
 	</tr>           
 </table>
+
 
 
 
@@ -194,7 +195,7 @@ Aquí encontraras los resúmenes para que comprendas los conceptos esenciales de
     	<th width="20%" style="color:#FFFFFF">Carácter</th>
 	</tr>       
     <tr>    
-        <td><a href="prueba/Programacion_avanzada.html">Ingeniería del software avanzada</a></td>
+        <td><a href="3-Curso/Segundo_cuatrimestre/Ingenieria_del_software_avanzada/Indice_ingenieria_del_software_avanzada.html">Ingeniería del software avanzada</a></td>
 		<td><center>6<center></td>
     	<td>Obligatoria</td>
     </tr>    
@@ -204,6 +205,7 @@ Aquí encontraras los resúmenes para que comprendas los conceptos esenciales de
     	<td>Optativas</td>
 	</tr>           
 </table>
+
 
 
 
