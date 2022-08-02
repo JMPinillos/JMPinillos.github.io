@@ -1,0 +1,600 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+
+<link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+    opacity: 0.4;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
+
+
+
+</style><title>Tema 1 - Introducción a las metodologías ágiles</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><h1 id='introducción-a-las-metodologías-ágiles'><span>Introducción a las metodologías ágiles</span></h1><h2 id='introducción'><span>Introducción</span></h2><p><span>Las </span><strong><span>metodologías tradicionales</span></strong><span> siguen una serie de fases estrictamente definidas, donde la introducción de cambios durante el desarrollo del proyecto resulta muy costosa y requieren grandes volúmenes de documentación.</span></p><p><span>Las </span><strong><span>metodologías ágiles</span></strong><span> intentan resolver los problemas de las metodologías tradicionales, enfatizando la agilidad y afrontando la incertidumbre, dando la oportunidad de evaluar funcionalidades del software durante el ciclo de desarrollo.</span></p><p><img src="images/Tabla_metodologias.png" alt="Tabla_metodologias" style="zoom:70%;" /></p><p>&nbsp;</p><h2 id='modelos-de-proceso-y-metodologías'><span>Modelos de proceso y metodologías</span></h2><p><strong><span>Proceso de software:</span></strong><span> es una serie de actividades relacionadas que conducen a la elaboración de un producto de software.</span></p><p><strong><span>Modelo de proceso de software:</span></strong><span> es una representación simplificada y abstracta de un proceso que nos ayuda a comprenderlo. </span></p><p><span>Los modelos de proceso pueden concretarse mediante un conjunto específico de actividades, personas y herramientas.</span></p><p><span>A estas concreciones las conocemos como </span><strong><span>metodologías de desarrollo de software</span></strong><span>.</span></p><p><span>Cualquier metodología debe definir </span><strong><span>¿Quién?, ¿Cuándo?, ¿Cómo?</span></strong></p><p>&nbsp;</p><h3 id='actividades-básicas-de-los-procesos-de-software'><span>Actividades básicas de los procesos de software</span></h3><ul><li><strong><span>Comunicación:</span></strong><span> entender los objetivos de cada uno de los participantes.</span></li><li><strong><span>Planificación:</span></strong><span> programar las actividades necesarias teniendo en cuenta los objetivos, los riesgos, los recursos, etc.</span></li><li><strong><span>Modelado:</span></strong><span> analizar el problema para comprenderlo mejor y planificar las líneas generales de la solución.</span></li><li><strong><span>Construcción:</span></strong><span> generación del código y loas pruebas necesarias.</span></li><li><strong><span>Despliegue:</span></strong><span> entregar el software al usuario final y nos de retroalimentación</span></li></ul><p><span>Dependiendo de la secuencia en que se realicen las actividades anteriores, se le da nombre al flujo de proceso:</span></p><ul><li><p><strong><span>Flujo lineal:</span></strong><span> ejecuta las actividades de forma secuencial.</span></p><p><img src="images/Flujo_lineal.png" referrerpolicy="no-referrer" alt="Flujo_lineal"></p><p>&nbsp;</p></li><li><p><strong><span>Flujo iterativo:</span></strong><span> repite una o más actividades antes de pasar a la siguiente.</span></p><p><img src="images/Flujo_iterativo.png" referrerpolicy="no-referrer" alt="Flujo_iterativo"></p><p>&nbsp;</p></li><li><p><strong><span>Flujo evolutivo/incremental:</span></strong><span> se realiza el proceso de forma circular. Cada círculo lleva una versión más completa del software.</span></p><p><img src="images/Flujo_evolutivo.png" referrerpolicy="no-referrer" alt="Flujo_evolutivo"></p><p>&nbsp;</p></li><li><p><strong><span>Flujo paralelo:</span></strong><span> ejecuta una o más actividades en paralelo con otras.</span></p><p><img src="images/Flujo_paralelo.png" referrerpolicy="no-referrer" alt="Flujo_paralelo"></p></li></ul><p>&nbsp;</p><h3 id='modelos-de-proceso-prescriptivos'><span>Modelos de proceso prescriptivos</span></h3><p><span>Se preocupan por definir de manera precisa las actividades y tareas, con el objetivo de desarrollar un software de calidad estableciendo fechas y presupuestos concretos, reduciendo así la incertidumbre.</span></p><p><strong>Modelo en cascada:</strong> representa el proceso como una secuencia de actividades bien definidas, donde una actividad no comienza hasta que finalice su predecesora. No tiene flexibilidad, con lo que los requisitos han de estar cláramente definidos al comienzo.<br>
+<strong style="color:red">Evitarlo</strong> si los requisitos son imprecisos, se preveen cambios en el alcance o si se desea disponer de una versión funcional temprana.<br></p><p><strong><span>Modelo incremental:</span></strong><span> se realizan versiones incrementales del producto, de manera que el software funcional llegue cuanto antes al cliente y este pueda dar retroalimentación.</span></p><ul><li><p><strong style="color:green">Ventajas:</strong> </p><ul><li><span>Facilita retroalimentación del cliente</span></li><li><span>Reduce el costo de adaptación de requisitos</span></li><li><span>Reduce el esfuerzo de análisis y documentación</span></li></ul></li><li><p><strong style="color:red">Problemas:</strong> </p><ul><li><span>Se pierde enfoque y control sobre el proceso</span></li><li><span>Degradación de la estruccutra del sistema</span></li></ul><p>&nbsp;</p><p><img src="images/Modelo_incremental.png" referrerpolicy="no-referrer" alt="Modelo_incremental"></p></li></ul><p>&nbsp;</p><p><strong><span>Modelo evolutivo:</span></strong><span> sigue un flujo iterativo, en el que en cada ciclo, se desarrollan versiones del software más completas. El software sólo verá la luz cuando esté completamente acabado.</span></p><p>&nbsp;</p><h3 id='modelos-de-proceso-especializados'><span>Modelos de proceso especializados</span></h3><p><strong><span>Modelo basado en componentes:</span></strong><span> se estructura el software en componentes, reduciendo así el tiempo y coste del proyecto, y aumentando la fiabilidad del sistema resultante.</span></p><p><strong>Modelo de métodos formales:</strong> hacen uso de la especificación matemática formal del software para especificar, desarrollar y verificar el sistema. Su objetivo es lograr un sistema libre de defectos.
+<br><strong style="color:red">La especificación formal dificulta la comunicación con el cliente.<br></strong></p><p>&nbsp;</p><p><strong><span>Modelo de proceso ágiles:</span></strong><span> enfatizan la agilidad como característica deseable de cualquier proceso de desarrollo y más cuanto mayor es la incertidumbre. Siempre flujos iterativos, evolutivos o incrementales.</span></p><p>&nbsp;</p><h3 id='procesos-ágiles'><span>Procesos ágiles</span></h3><p><span>Los </span><strong><span>procesos ágiles</span></strong><span> son procesos de adaptación incremental rápida a los cambios en las necesidades del proyecto, apoyándose en la retroalimentación constante del cliente.</span></p><h4 id='manifiesto-ágil-2001-basado-en-4-valores'><strong><span>Manifiesto ágil</span></strong><span> (2001) basado en 4 valores</span></h4><ul><li><strong><span>Individuos e interacciones</span></strong><span> frente a </span><strong><span>procesos y herramientas</span></strong><span>.</span></li><li><strong><span>Software funcional</span></strong><span> frente a </span><strong><span>documentación excesiva</span></strong><span>.</span></li><li><strong><span>Colaboración con el cliente</span></strong><span> frente a la </span><strong><span>negociación contractual</span></strong><span>.</span></li><li><strong><span>Adaptación al cambio</span></strong><span> frente </span><strong><span>seguimiento de un plan</span></strong><span>.</span></li></ul><p><strong><span>Valoración de indivíduos e interacciones:</span></strong><span> el factor clave del éxito de un proyecto es el equipo, las relaciones entre ellos y la habilidad de construir un entorno de trabajo. Es importante las interacciones entre el equipo, cliente y desarrolladores.</span></p><p><strong><span>Valoración del software funcional:</span></strong><span> la documentación es necesaria, pero su desarrollo debe mantenerse en los niveles extríctamente necesarios para que cumpla su misión, siendo breve y centrándose en lo fundamental.</span></p><p><strong><span>La colaboración con el cliente:</span></strong><span> la comunicación y complicidad con el cliente son imprescindibles y debemos considerarlo uno más del equipo.</span></p><p><strong><span>La respuesta al cambio:</span></strong><span> no tiene sentido elaborar grandes planes de proyecto cuando el futuro puede resultar incierto o cambiante.</span></p><p>&nbsp;</p><h4 id='12-principios-del-manifiesto-ágil'><span>12 principios del manifiesto ágil</span></h4><ol start='' ><li><strong><span>Satisfacer al cliente</span></strong><span> con entregas tempranas.</span></li><li><strong><span>Aceptación de cambios</span></strong><span> en los requisitos.</span></li><li><strong><span>Entrega de productos</span></strong><span> funcionales en periodos cortos.</span></li><li><strong><span>Negocio y desarrollo</span></strong><span> próximos.</span></li><li><strong><span>Motivación</span></strong><span> del equipo.</span></li><li><strong><span>Comunicación oral</span></strong><span>, cara a cara.</span></li><li><strong><span>Software funcional</span></strong><span> medida del progreso.</span></li><li><strong><span>Ritmo constante</span></strong><span> y continuo.</span></li><li><strong><span>Técnicas</span></strong><span> orientadas a mejorar la calidad.</span></li><li><strong><span>Énfasis en la simplicidad</span></strong><span>.</span></li><li><strong><span>Autoorganización</span></strong><span> del equipo.</span></li><li><strong><span>Reflexión</span></strong><span> sobre el proceso.</span></li></ol><p>&nbsp;</p><h2 id='algunas-metodologías-ágiles'><span>Algunas metodologías ágiles</span></h2><h3 id='programación-extrema-xp'><span>Programación extrema (XP)</span></h3><ul><li><span>Muy utilizada y estudiada</span></li><li><span>Se centra en prácticas de ingeniería concretas.</span></li></ul><p><span>Soluciones aportadas por la programación extrema:</span></p><ul><li><p><strong><span>Ámbito de la programación:</span></strong></p><ul><li><span>Diseño simple.</span></li><li><span>Desarrollo dirigido por pruebas.</span></li><li><span>Codificación siguiendo estándares de programación.</span></li></ul></li><li><p><strong><span>Ámbito de gestión del equipo:</span></strong></p><ul><li><span>Propiedad colectiva del código</span></li><li><span>Programación en parejas</span></li><li><span>Bienestar del programador</span></li></ul></li><li><p><strong><span>Ámbito de los procesos:</span></strong></p><ul><li><span>Cliente es un miembro del equipo.</span></li><li><span>Entregas frecuentes.</span></li></ul></li></ul><p>&nbsp;</p><h3 id='scrum'><span>SCRUM</span></h3><ul><li><span>Orígenes en el desarrollo del producto.</span></li><li><span>Equipos de tamaño reducido.</span></li></ul><p><img src="images/Fases_SCRUM.png" referrerpolicy="no-referrer" alt="Fases_SCRUM"></p><p><strong><span>Fase 1</span></strong><span>: se definen y analizan las funciones esperadas del sistema. </span><strong><span>ProductBacklog</span></strong><span> y </span><strong><span>SprintBacklog</span></strong><span>.</span></p><p><strong><span>Fase 2:</span></strong><span> se distribuyen las tareas de desarrollo entre los miembros del equipo. Durante cada iteración se realiza un seguimiento del proceso mediante reuniones diarias cortas.</span></p><p><strong><span>Fase 3:</span></strong><span> se evalua la entrega al final de cada iteracción. Esto se realiza durante la </span><strong><span>Revisión del Sprint</span></strong><span>, donde se analiza el incremento y se decide si se rechaza o acepta la entrega, y la </span><strong><span>Retrospectiva del Sprint</span></strong><span>, donde el equipo analiza el trabajo realizado y plantea posibilidades de mejora.</span></p><p>&nbsp;</p><h3 id='crystal'><span>Crystal</span></h3><p><span>Se centra en el equipo, donde la comunicación juega un papel fundamental.</span></p><p><span>En función del tamaño del equipo surjen tres variantes:</span></p><ul><li><strong><span>Cristal Clear:</span></strong><span> menos de 8 miembros.</span></li><li><strong><span>Crystal Yellow:</span></strong><span> entre 10 y 20 miembros.</span></li><li><strong><span>Crystal Orange:</span></strong><span> entre 25 y 50 miembros.</span></li></ul><p><span>Estas tres variantes comparten las siguientes prioridades:</span></p><ul><li><span>Seguridad en la obtención de resultados según los recursos disponibles.</span></li><li><span>Eficiencia del proceso aprovechando los recursos disponibles.</span></li><li><span>Aceptación de las convenciones</span></li></ul><p><span>Además se definen 7 propiedades fundamentales:</span></p><ol start='' ><li><strong><span>Entregas frecuentes</span></strong></li><li><strong><span>Mejora reflexiva:</span></strong><span> diálogo sobre la propia práctica.</span></li><li><strong><span>Comunicación osmótica:</span></strong><span> espacio de trabajo en común.</span></li><li><strong><span>Seguridad personal:</span></strong><span> libertad para expresarse</span></li><li><strong><span>Focus:</span></strong><span> concentración en la tarea sin interrupciones</span></li><li><strong><span>Acceso directo a usuarios expertos:</span></strong><span> feedback.</span></li><li><strong><span>Entorno tecnológicamente apropiado:</span></strong><span> herramientas adecuadas.</span></li></ol><p>&nbsp;</p><h3 id='feature-driven-development-fdd'><span>Feature-Driven Development (FDD)</span></h3><ul><li><p><span>Iteracciones muy cortas (menos de dos semanas)</span></p></li><li><p><span>Centradas en cumplir características:</span></p><ul><li><p><span>Sencillas y desarrolladas en poco tiempo.</span></p></li><li><p><span>Aportación desde un punto de vista de negocio:</span></p><ul><li><p><strong style="color:red">&lt;acción&gt; </strong><strong style="color:black">&lt;resultado&gt; </strong><strong style="color:blue">&lt;objeto&gt;</strong></p></li><li><p><strong style="color:red">Calcular </strong><strong style="color:black">el importe </strong><strong style="color:blue">de un pedido.</strong></p></li><li><p><strong style="color:red">Enviar </strong><strong style="color:black">un mensaje de confirmación </strong><strong style="color:blue">a un comprador.</strong></p></li></ul></li></ul></li><li><p><span>Énfasis en el diseño y el modelo en 5 pasos:</span></p><ol start='' ><li><p><span>Desarrollo de un modelo de dominio general.</span></p></li><li><p><span>Construcción de una jerarquía de características:</span></p><ul><li><span>Área de dominio.</span></li><li><span>Actividades.</span></li><li><span>Características concretas.</span></li></ul></li><li><p><span>Planificación por características agrupadas en paquetes.</span></p></li><li><p><span>Diseño por característica (cada desarrollador su paquete).</span></p></li><li><p><span>Desarrollo por caraterística de cada programador.</span></p></li></ol></li></ul><p>&nbsp;</p><p><img src="images/FDD.png" alt="FDD" style="zoom:80%;" /></p><p>&nbsp;</p><h3 id='adaptive-software-development-asd'><span>Adaptive Software Development (ASD)</span></h3><ul><li><p><span>Parte del conocimiento en que las necesidades del cliente van a cambiar siempre, tanto durante el proyecto como tras su finalización.</span></p></li><li><p><span>Son un conjunto de procedimientos que ayudan a las empresas a adaptarse.</span></p></li><li><p><span>Objetivos:</span></p><ul><li><span>Concienciar a la organización a trabajar con el cambio</span></li><li><span>Facilitar la gestión del cambio y la comunicación</span></li><li><span>Definir estrategias de desarrollo rápido pero con disciplina</span></li></ul></li></ul><p>&nbsp;</p><p><img src="images/ASD.png" alt="ASD" style="zoom:80%;" /></p><p>&nbsp;</p><h4 id='especulación'><span>Especulación</span></h4><p><span>Reconoce la incertidumbre. </span></p><p><strong><span>Iniciación del proyecto:</span></strong><span> conocer la misión, los objetivos, las restricciones, el alcance y los riesgos.</span></p><p><strong><span>Planificación adaptativa</span></strong><span> teniendo en cuenta los recursos, definiendo el marco temporal y el número de iteraciones.</span></p><p>&nbsp;</p><h4 id='colaboración'><span>Colaboración</span></h4><p><span>Las habilidades comunicativas son fundamentales.</span></p><p><strong><span>Desarrollo concurrente del sistema:</span></strong><span> desarrollo orientado a componentes haciendo hincapié en la comunicación.</span></p><p>&nbsp;</p><h4 id='aprendizaje'><span>Aprendizaje</span></h4><p><span>Aprender de los errores.</span></p><p><strong><span>Revisión de la calidad.</span></strong></p><p><strong><span>Reflexión del equipo.</span></strong></p><p>&nbsp;</p><h2 id='conclusiones'><span>Conclusiones</span></h2><p><span>Las metodologías ágiles </span><strong><span>no son la solución a cualquier problema</span></strong><span> de desarrollo y en ocasiones no son aconsejables. </span></p><p><span>Están pensadas para equipos pequeños, autoorganizados y ubicados en un mismo lugar.</span></p><p><span>Para los grandes sistemas nos encontramos con:</span></p><ul><li><span>Dificultad de visión global y comunicación</span></li><li><span>Dependencias entre subsistemas</span></li><li><span>Restricciones sobre los procesos permitidos</span></li><li><span>Aumenta la probabilidad de cambio.</span></li><li><span>Demasiados </span><em><span>stackholders</span></em><span> dificultan su implicación en el proceso.</span></li></ul><p><strong><span>Factores que influyen en la elección de metodologías ágiles:</span></strong></p><ul><li><span>Tamaño del proyecto y del equipo.</span></li><li><span>Variabilidad de los requisitos en el tiempo.</span></li><li><span>Posibilidad de ver el sistema funcionando.</span></li><li><span>Diponibilidad del cliente.</span></li><li><span>Experiencia y preparación del equipo.</span></li><li><span>Cultura de la organización.</span></li></ul><p>&nbsp;</p><footer><center>by <strong>Jose Manuel Pinillos</strong> &amp; <strong>Alberto de la Serna</strong></center></footer></div></div>
+</body>
+</html>

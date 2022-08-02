@@ -1,1041 +1,240 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html class="no-js" lang="es">
 <head>
-<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
-
-<link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
-.mac-os-11 { --title-bar-height:28px; }
-html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
-body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
-iframe { margin: auto; }
-a.url { word-break: break-all; }
-a:active, a:hover { outline: 0px; }
-.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
-#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
-#write.first-line-indent p { text-indent: 2em; }
-#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
-#write.first-line-indent li { margin-left: 2em; }
-.for-image #write { padding-left: 8px; padding-right: 8px; }
-body.typora-export { padding-left: 30px; padding-right: 30px; }
-.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
-.typora-export .task-list-item input { pointer-events: none; }
-@media screen and (max-width: 500px) {
-  body.typora-export { padding-left: 0px; padding-right: 0px; }
-  #write { padding-left: 20px; padding-right: 20px; }
-  .CodeMirror-sizer { margin-left: 0px !important; }
-  .CodeMirror-gutters { display: none !important; }
-}
-#write li > figure:last-child { margin-bottom: 0.5rem; }
-#write ol, #write ul { position: relative; }
-img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
-button, input, select, textarea { color: inherit; font: inherit; }
-input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
-*, ::after, ::before { box-sizing: border-box; }
-#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
-#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
-p { line-height: inherit; }
-h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
-p { orphans: 4; }
-h1 { font-size: 2rem; }
-h2 { font-size: 1.8rem; }
-h3 { font-size: 1.6rem; }
-h4 { font-size: 1.4rem; }
-h5 { font-size: 1.2rem; }
-h6 { font-size: 1rem; }
-.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
-.hidden { display: none; }
-.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
-a { cursor: pointer; }
-sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
-sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
-#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
-figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
-figure > table { margin: 0px; }
-tr { break-inside: avoid; break-after: auto; }
-thead { display: table-header-group; }
-table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
-table.md-table td { min-width: 32px; }
-.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
-.CodeMirror-linenumber { user-select: none; }
-.CodeMirror { text-align: left; }
-.CodeMirror-placeholder { opacity: 0.3; }
-.CodeMirror pre { padding: 0px 4px; }
-.CodeMirror-lines { padding: 0px; }
-div.hr:focus { cursor: none; }
-#write pre { white-space: pre-wrap; }
-#write.fences-no-line-wrapping pre { white-space: pre; }
-#write pre.ty-contain-cm { white-space: normal; }
-.CodeMirror-gutters { margin-right: 4px; }
-.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
-.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
-#write .md-fences.mock-cm { white-space: pre-wrap; }
-.md-fences.md-fences-with-lineno { padding-left: 0px; }
-#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
-.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
-.CodeMirror-line, twitterwidget { break-inside: avoid; }
-.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
-.footnotes + .footnotes { margin-top: 0px; }
-.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
-li div { padding-top: 0px; }
-blockquote { margin: 1rem 0px; }
-li .mathjax-block, li p { margin: 0.5rem 0px; }
-li blockquote { margin: 1rem 0px; }
-li { margin: 0px; position: relative; }
-blockquote > :last-child { margin-bottom: 0px; }
-blockquote > :first-child, li > :first-child { margin-top: 0px; }
-.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
-#write .footnote-line { white-space: pre-wrap; }
-@media print {
-  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
-  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
-  .typora-export * { -webkit-print-color-adjust: exact; }
-  .typora-export #write { break-after: avoid; }
-  .typora-export #write::after { height: 0px; }
-  .is-mac table { break-inside: avoid; }
-  .typora-export-show-outline .typora-export-sidebar { display: none; }
-}
-.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
-a img, img a { cursor: pointer; }
-pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
-p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
-#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
-p > .md-image:only-child { display: inline-block; width: 100%; }
-#write .MathJax_Display { margin: 0.8em 0px 0px; }
-.md-math-block { width: 100%; }
-.md-math-block:not(:empty)::after { display: none; }
-.MathJax_ref { fill: currentcolor; }
-[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
-.md-task-list-item { position: relative; list-style-type: none; }
-.task-list-item.md-task-list-item { padding-left: 0px; }
-.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
-.math { font-size: 1rem; }
-.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
-.md-toc-content { position: relative; margin-left: 0px; }
-.md-toc-content::after, .md-toc::after { display: none; }
-.md-toc-item { display: block; color: rgb(65, 131, 196); }
-.md-toc-item a { text-decoration: none; }
-.md-toc-inner:hover { text-decoration: underline; }
-.md-toc-inner { display: inline-block; cursor: pointer; }
-.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
-.md-toc-h2 .md-toc-inner { margin-left: 2em; }
-.md-toc-h3 .md-toc-inner { margin-left: 4em; }
-.md-toc-h4 .md-toc-inner { margin-left: 6em; }
-.md-toc-h5 .md-toc-inner { margin-left: 8em; }
-.md-toc-h6 .md-toc-inner { margin-left: 10em; }
-@media screen and (max-width: 48em) {
-  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
-  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
-  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
-  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
-}
-a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
-.footnote-line a:not(.reversefootnote) { color: inherit; }
-.md-attr { display: none; }
-.md-fn-count::after { content: "."; }
-code, pre, samp, tt { font-family: var(--monospace); }
-kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
-.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
-code { text-align: left; vertical-align: initial; }
-a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
-.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
-.md-diagram-panel > svg { max-width: 100%; }
-[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
-[lang="mermaid"] .node text { font-size: 1rem; }
-table tr th { border-bottom: 0px; }
-video { max-width: 100%; display: block; margin: 0px auto; }
-iframe { max-width: 100%; width: 100%; border: none; }
-.highlight td, .highlight tr { border: 0px; }
-mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
-.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
-.md-expand mark .md-meta { opacity: 0.3 !important; }
-mark .md-meta { color: rgb(0, 0, 0); }
-@media print {
-  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
-}
-.md-diagram-panel .messageText { stroke: none !important; }
-.md-diagram-panel .start-state { fill: var(--node-fill); }
-.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
-.md-fences.md-fences-math { font-size: 1em; }
-.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
-.md-fences-advanced:not(.md-focus) { background: inherit; }
-.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
-.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
-.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
-.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
-@media screen and (max-width: 1024px) {
-  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
-}
-@media screen and (max-width: 800px) {
-  .typora-export-sidebar { display: none; }
-}
-.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
-.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
-.outline-content strong { font-weight: 400; }
-.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
-.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
-.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
-.outline-expander:hover::before { content: ""; }
-.outline-h1 > .outline-item { padding-left: 0px; }
-.outline-h2 > .outline-item { padding-left: 1em; }
-.outline-h3 > .outline-item { padding-left: 2em; }
-.outline-h4 > .outline-item { padding-left: 3em; }
-.outline-h5 > .outline-item { padding-left: 4em; }
-.outline-h6 > .outline-item { padding-left: 5em; }
-.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
-.outline-label:hover { text-decoration: underline; }
-.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
-.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
-.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
-.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
-.outline-children { display: none; }
-.info-panel-tab-wrapper { display: none; }
-.outline-item-open > .outline-children { display: block; }
-.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
-.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
-.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
-.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
-.typora-export-collapse-outline .outline-children { display: none; }
-.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
-.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
-.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
-.md-inline-math-container mjx-container { zoom: 0.95; }
-
-
-:root {
-    --side-bar-bg-color: #fafafa;
-    --control-text-color: #777;
-}
-
-@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
-
-/* open-sans-regular - latin-ext_latin */
-  /* open-sans-italic - latin-ext_latin */
-    /* open-sans-700 - latin-ext_latin */
-    /* open-sans-700italic - latin-ext_latin */
-  html {
-    font-size: 16px;
-    -webkit-font-smoothing: antialiased;
-}
-
-body {
-    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
-    color: rgb(51, 51, 51);
-    line-height: 1.6;
-}
-
-#write {
-    max-width: 860px;
-  	margin: 0 auto;
-  	padding: 30px;
-    padding-bottom: 100px;
-}
-
-@media only screen and (min-width: 1400px) {
-	#write {
-		max-width: 1024px;
-	}
-}
-
-@media only screen and (min-width: 1800px) {
-	#write {
-		max-width: 1200px;
-	}
-}
-
-#write > ul:first-child,
-#write > ol:first-child{
-    margin-top: 30px;
-}
-
-a {
-    color: #4183C4;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    position: relative;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    font-weight: bold;
-    line-height: 1.4;
-    cursor: text;
-}
-h1:hover a.anchor,
-h2:hover a.anchor,
-h3:hover a.anchor,
-h4:hover a.anchor,
-h5:hover a.anchor,
-h6:hover a.anchor {
-    text-decoration: none;
-}
-h1 tt,
-h1 code {
-    font-size: inherit;
-}
-h2 tt,
-h2 code {
-    font-size: inherit;
-}
-h3 tt,
-h3 code {
-    font-size: inherit;
-}
-h4 tt,
-h4 code {
-    font-size: inherit;
-}
-h5 tt,
-h5 code {
-    font-size: inherit;
-}
-h6 tt,
-h6 code {
-    font-size: inherit;
-}
-h1 {
-    font-size: 2.25em;
-    line-height: 1.2;
-    border-bottom: 1px solid #eee;
-}
-h2 {
-    font-size: 1.75em;
-    line-height: 1.225;
-    border-bottom: 1px solid #eee;
-}
-
-/*@media print {
-    .typora-export h1,
-    .typora-export h2 {
-        border-bottom: none;
-        padding-bottom: initial;
-    }
-
-    .typora-export h1::after,
-    .typora-export h2::after {
-        content: "";
-        display: block;
-        height: 100px;
-        margin-top: -96px;
-        border-top: 1px solid #eee;
-    }
-}*/
-
-h3 {
-    font-size: 1.5em;
-    line-height: 1.43;
-}
-h4 {
-    font-size: 1.25em;
-}
-h5 {
-    font-size: 1em;
-}
-h6 {
-   font-size: 1em;
-    color: #777;
-}
-p,
-blockquote,
-ul,
-ol,
-dl,
-table{
-    margin: 0.8em 0;
-}
-li>ol,
-li>ul {
-    margin: 0 0;
-}
-hr {
-    height: 2px;
-    padding: 0;
-    margin: 16px 0;
-    background-color: #e7e7e7;
-    border: 0 none;
-    overflow: hidden;
-    box-sizing: content-box;
-}
-
-li p.first {
-    display: inline-block;
-}
-ul,
-ol {
-    padding-left: 30px;
-}
-ul:first-child,
-ol:first-child {
-    margin-top: 0;
-}
-ul:last-child,
-ol:last-child {
-    margin-bottom: 0;
-}
-blockquote {
-    border-left: 4px solid #dfe2e5;
-    padding: 0 15px;
-    color: #777777;
-}
-blockquote blockquote {
-    padding-right: 0;
-}
-table {
-    padding: 0;
-    word-break: initial;
-}
-table tr {
-    border: 1px solid #dfe2e5;
-    margin: 0;
-    padding: 0;
-}
-table tr:nth-child(2n),
-thead {
-    background-color: #f8f8f8;
-}
-table th {
-    font-weight: bold;
-    border: 1px solid #dfe2e5;
-    border-bottom: 0;
-    margin: 0;
-    padding: 6px 13px;
-}
-table td {
-    border: 1px solid #dfe2e5;
-    margin: 0;
-    padding: 6px 13px;
-}
-table th:first-child,
-table td:first-child {
-    margin-top: 0;
-}
-table th:last-child,
-table td:last-child {
-    margin-bottom: 0;
-}
-
-.CodeMirror-lines {
-    padding-left: 4px;
-}
-
-.code-tooltip {
-    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
-    border-top: 1px solid #eef2f2;
-}
-
-.md-fences,
-code,
-tt {
-    border: 1px solid #e7eaed;
-    background-color: #f8f8f8;
-    border-radius: 3px;
-    padding: 0;
-    padding: 2px 4px 0px 4px;
-    font-size: 0.9em;
-}
-
-code {
-    background-color: #f3f4f4;
-    padding: 0 2px 0 2px;
-}
-
-.md-fences {
-    margin-bottom: 15px;
-    margin-top: 15px;
-    padding-top: 8px;
-    padding-bottom: 6px;
-}
-
-
-.md-task-list-item > input {
-  margin-left: -1.3em;
-}
-
-@media print {
-    html {
-        font-size: 13px;
-    }
-    table,
-    pre {
-        page-break-inside: avoid;
-    }
-    pre {
-        word-wrap: break-word;
-    }
-}
-
-.md-fences {
-	background-color: #f8f8f8;
-}
-#write pre.md-meta-block {
-	padding: 1rem;
-    font-size: 85%;
-    line-height: 1.45;
-    background-color: #f7f7f7;
-    border: 0;
-    border-radius: 3px;
-    color: #777777;
-    margin-top: 0 !important;
-}
-
-.mathjax-block>.code-tooltip {
-	bottom: .375rem;
-}
-
-.md-mathjax-midline {
-    background: #fafafa;
-}
-
-#write>h3.md-focus:before{
-	left: -1.5625rem;
-	top: .375rem;
-}
-#write>h4.md-focus:before{
-	left: -1.5625rem;
-	top: .285714286rem;
-}
-#write>h5.md-focus:before{
-	left: -1.5625rem;
-	top: .285714286rem;
-}
-#write>h6.md-focus:before{
-	left: -1.5625rem;
-	top: .285714286rem;
-}
-.md-image>.md-meta {
-    /*border: 1px solid #ddd;*/
-    border-radius: 3px;
-    padding: 2px 0px 0px 4px;
-    font-size: 0.9em;
-    color: inherit;
-}
-
-.md-tag {
-    color: #a7a7a7;
-    opacity: 1;
-}
-
-.md-toc { 
-    margin-top:20px;
-    padding-bottom:20px;
-}
-
-.sidebar-tabs {
-    border-bottom: none;
-}
-
-#typora-quick-open {
-    border: 1px solid #ddd;
-    background-color: #f8f8f8;
-}
-
-#typora-quick-open-item {
-    background-color: #FAFAFA;
-    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
-    border-style: solid;
-    border-width: 1px;
-}
-
-/** focus mode */
-.on-focus-mode blockquote {
-    border-left-color: rgba(85, 85, 85, 0.12);
-}
-
-header, .context-menu, .megamenu-content, footer{
-    font-family: "Segoe UI", "Arial", sans-serif;
-}
-
-.file-node-content:hover .file-node-icon,
-.file-node-content:hover .file-node-open-state{
-    visibility: visible;
-}
-
-.mac-seamless-mode #typora-sidebar {
-    background-color: #fafafa;
-    background-color: var(--side-bar-bg-color);
-}
-
-.md-lang {
-    color: #b4654d;
-}
-
-/*.html-for-mac {
-    --item-hover-bg-color: #E6F0FE;
-}*/
-
-#md-notification .btn {
-    border: 0;
-}
-
-.dropdown-menu .divider {
-    border-color: #e5e5e5;
-    opacity: 0.4;
-}
-
-.ty-preferences .window-content {
-    background-color: #fafafa;
-}
-
-.ty-preferences .nav-group-item.active {
-    color: white;
-    background: #999;
-}
-
-.menu-item-container a.menu-style-btn {
-    background-color: #f5f8fa;
-    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
-}
-
-
-
-mjx-container[jax="SVG"] {
-  direction: ltr;
-}
-
-mjx-container[jax="SVG"] > svg {
-  overflow: visible;
-  min-height: 1px;
-  min-width: 1px;
-}
-
-mjx-container[jax="SVG"] > svg a {
-  fill: blue;
-  stroke: blue;
-}
-
-mjx-assistive-mml {
-  position: absolute !important;
-  top: 0px;
-  left: 0px;
-  clip: rect(1px, 1px, 1px, 1px);
-  padding: 1px 0px 0px 0px !important;
-  border: 0px !important;
-  display: block !important;
-  width: auto !important;
-  overflow: hidden !important;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-mjx-assistive-mml[display="block"] {
-  width: 100% !important;
-}
-
-mjx-container[jax="SVG"][display="true"] {
-  display: block;
-  text-align: center;
-  margin: 1em 0;
-}
-
-mjx-container[jax="SVG"][display="true"][width="full"] {
-  display: flex;
-}
-
-mjx-container[jax="SVG"][justify="left"] {
-  text-align: left;
-}
-
-mjx-container[jax="SVG"][justify="right"] {
-  text-align: right;
-}
-
-g[data-mml-node="merror"] > g {
-  fill: red;
-  stroke: red;
-}
-
-g[data-mml-node="merror"] > rect[data-background] {
-  fill: yellow;
-  stroke: none;
-}
-
-g[data-mml-node="mtable"] > line[data-line], svg[data-table] > g > line[data-line] {
-  stroke-width: 70px;
-  fill: none;
-}
-
-g[data-mml-node="mtable"] > rect[data-frame], svg[data-table] > g > rect[data-frame] {
-  stroke-width: 70px;
-  fill: none;
-}
-
-g[data-mml-node="mtable"] > .mjx-dashed, svg[data-table] > g > .mjx-dashed {
-  stroke-dasharray: 140;
-}
-
-g[data-mml-node="mtable"] > .mjx-dotted, svg[data-table] > g > .mjx-dotted {
-  stroke-linecap: round;
-  stroke-dasharray: 0,140;
-}
-
-g[data-mml-node="mtable"] > g > svg {
-  overflow: visible;
-}
-
-[jax="SVG"] mjx-tool {
-  display: inline-block;
-  position: relative;
-  width: 0;
-  height: 0;
-}
-
-[jax="SVG"] mjx-tool > mjx-tip {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-mjx-tool > mjx-tip {
-  display: inline-block;
-  padding: .2em;
-  border: 1px solid #888;
-  font-size: 70%;
-  background-color: #F8F8F8;
-  color: black;
-  box-shadow: 2px 2px 5px #AAAAAA;
-}
-
-g[data-mml-node="maction"][data-toggle] {
-  cursor: pointer;
-}
-
-mjx-status {
-  display: block;
-  position: fixed;
-  left: 1em;
-  bottom: 1em;
-  min-width: 25%;
-  padding: .2em .4em;
-  border: 1px solid #888;
-  font-size: 90%;
-  background-color: #F8F8F8;
-  color: black;
-}
-
-foreignObject[data-mjx-xml] {
-  font-family: initial;
-  line-height: normal;
-  overflow: visible;
-}
-
-mjx-container[jax="SVG"] path[data-c], mjx-container[jax="SVG"] use[data-c] {
-  stroke-width: 3;
-}
-
-g[data-mml-node="xypic"] path {
-  stroke-width: inherit;
-}
-
-.MathJax g[data-mml-node="xypic"] path {
-  stroke-width: inherit;
-}
-mjx-container[jax="SVG"] path[data-c], mjx-container[jax="SVG"] use[data-c] {
-							stroke-width: 0;
-						}
-</style><title>index</title>
+	<meta charset="utf-8" />
+	<meta http-equiv="x-ua-compatible" content="ie=edge" />
+	<title>Bienvenido | P&A</title>
+	<meta name="description" content="" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+	<link rel="icon" href="favicon.ico" type="image/x-icon" />
+	<!-- Google font -->
+	<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+	<!-- Ico Font CSS -->
+	<link rel="stylesheet" href="css/icofont.css" />
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<!-- Style CSS -->
+	<link rel="stylesheet" href="css/style.css" />
+	<!-- Responsive CSS -->
+	<link rel="stylesheet" href="css/responsive.css" />
 </head>
-<body class='typora-export os-windows'><div class='typora-export-content'>
-<div id='write'  class=''><h1 id='resúmenes-ingenieria-informatica'><span>RESÚMENES INGENIERIA INFORMATICA</span></h1><p><span>Aquí encontraras los resúmenes para que comprendas los conceptos esenciales de cada asignatura del grado de Ingeniería Informática de UNIR.</span></p><p>&nbsp;</p><h3 id='primer-año---60etcs'><span>Primer año - 60ETCS</span></h3><h5 id='primer-cuatrimestre-1'><span>Primer cuatrimestre</span></h5><table>  
-	<tbody><tr style="background-color: rgb(0, 147, 255);">
-    	<th width="60%" style="color:#FFFFFF">Asignaturas</th>
-    	<th width="20%" style="color:#FFFFFF"><center>Créditos<center></center></center></th>
-    	<th width="20%" style="color:#FFFFFF">Carácter</th>
-	</tr>   
-    <tr>
-        <td>Álgebra y Matemática Discreta</td>
-    	<td><center>6<center></center></center></td>
-        <td>Básica</td>
-    </tr>
-    <tr>    
-        <td>Tecnología de Computadores</td>
-		<td><center>6<center></center></center></td>
-    	<td>Básica</td>
-    </tr>    
-    <tr>    
-        <td>Fundamentos Físicos de la Informática</td>
-		<td><center>6<center></center></center></td>
-    	<td>Básica</td>
-    </tr>    
-    <tr>    
-        <td>Fundamentos de programación</td>
-		<td><center>6<center></center></center></td>
-    	<td>Básica</td>
-    </tr>    
-    <tr>    
-        <td>Fundamentos de la Empresa</td>
-		<td><center>6<center></center></center></td>
-    	<td>Básica</td>
-	</tr>
-</tbody></table> <p>&nbsp;</p><h5 id='segundo-cuatrimestre-1'><span>Segundo cuatrimestre</span></h5><table>  
-	<tbody><tr style="background-color: rgb(0, 147, 255);">
-    	<th width="60%" style="color:#FFFFFF">Asignaturas</th>
-    	<th width="20%" style="color:#FFFFFF"><center>Créditos<center></center></center></th>
-    	<th width="20%" style="color:#FFFFFF">Carácter</th>
-	</tr>     
-    <tr>
-        <td>Interacción persona-ordenador</td>
-    	<td><center>6<center></center></center></td>
-        <td>Obligatoria</td>
-    </tr>
-    <tr>    
-        <td>Lógica Computacional</td>
-		<td><center>6<center></center></center></td>
-    	<td>Básica</td>
-    </tr>    
-    <tr>    
-        <td>Cálculo y Métodos Numéricos</td>
-		<td><center>6<center></center></center></td>
-    	<td>Básica</td>
-    </tr>    
-    <tr>    
-        <td>Algoritmia y Complejidad</td>
-		<td><center>6<center></center></center></td>
-    	<td>Básica</td>
-    </tr>    
-    <tr>    
-        <td>Sistemas Operativos</td>
-		<td><center>6<center></center></center></td>
-    	<td>Básica</td>
-	</tr>
-</tbody></table><p>&nbsp;</p><p>&nbsp;</p><h3 id='segundo-año---60etcs'><span>Segundo año - 60ETCS</span></h3><h5 id='primer-cuatrimestre-2'><span>Primer cuatrimestre</span></h5><table>  
-	<tbody><tr style="background-color: rgb(0, 147, 255);">
-    	<th width="60%" style="color:#FFFFFF">Asignaturas</th>
-    	<th width="20%" style="color:#FFFFFF"><center>Créditos<center></center></center></th>
-    	<th width="20%" style="color:#FFFFFF">Carácter</th>
-	</tr>    
-    <tr>
-        <td>Estadística</td>
-    	<td><center>6<center></center></center></td>
-        <td>Básica</td>
-    </tr>            
-    <tr>
-        <td>Estructura de datos</td>
-    	<td><center>6<center></center></center></td>
-        <td>Obligatoria</td>
-    </tr>
-    <tr>    
-        <td>Deontología y Legislación Informática</td>
-		<td><center>3<center></center></center></td>
-    	<td>Obligatoria</td>
-    </tr>    
-    <tr>    
-        <td>Ingeniería del software</td>
-		<td><center>6<center></center></center></td>
-    	<td>Obligatoria</td>
-    </tr>    
-    <tr>    
-        <td>Comunicación y Liderazgo</td>
-		<td><center>3<center></center></center></td>
-    	<td>Obligatoria</td>
-    </tr>    
-    <tr>    
-        <td>Sistemas operativos avanzados</td>
-		<td><center>6<center></center></center></td>
-    	<td>Obligatoria</td>
-	</tr>
-</tbody></table><p>&nbsp;</p><h5 id='segundo-cuatrimestre-2'><span>Segundo cuatrimestre</span></h5><table>  
-	<tbody><tr style="background-color: rgb(0, 147, 255);">
-    	<th width="60%" style="color:#FFFFFF">Asignaturas</th>
-    	<th width="20%" style="color:#FFFFFF"><center>Créditos<center></center></center></th>
-    	<th width="20%" style="color:#FFFFFF">Carácter</th>
-	</tr>        
-    <tr>
-        <td><a href="2-Curso/Segundo_cuatrimestre/Programacion_avanzada/Indice_programacion_avanzada.html">Programación avanzada</a></td>
-    	<td><center>6<center></center></center></td>
-        <td>Obligatoria</td>
-    </tr>
-    <tr>    
-        <td>Redes de ordenadores</td>
-		<td><center>6<center></center></center></td>
-    	<td>Obligatoria</td>
-    </tr>    
-    <tr>    
-        <td><a href="2-Curso/Segundo_cuatrimestre/Estructura_de_computadores/Indice_estructura_de_Computadores.html">Estructura de Computadores</a></td>
-		<td><center>6<center></center></center></td>
-    	<td>Obligatoria</td>
-    </tr>    
-    <tr>    
-        <td>Inteligencia artificial e ingeniería del conocimiento</td>
-		<td><center>6<center></center></center></td>
-    	<td>Obligatoria</td>
-    </tr>    
-    <tr>    
-        <td>Bases de datos</td>
-		<td><center>6<center></center></center></td>
-    	<td>Obligatoria</td>
-	</tr>           
-</tbody></table><p>&nbsp;</p><p>&nbsp;</p><h3 id='tercer-año---60etcs'><span>Tercer año - 60ETCS</span></h3><h5 id='primer-cuatrimestre-3'><span>Primer cuatrimestre</span></h5><table>  
-	<tbody><tr style="background-color: rgb(0, 147, 255);">
-    	<th width="60%" style="color:#FFFFFF">Asignaturas</th>
-    	<th width="20%" style="color:#FFFFFF"><center>Créditos<center></center></center></th>
-    	<th width="20%" style="color:#FFFFFF">Carácter</th>
-	</tr>        
-    <tr>    
-        <td>Gestión de proyectos</td>
-		<td><center>6<center></center></center></td>
-    	<td>Obligatoria</td>
-    </tr>    
-    <tr>    
-        <td>Asignaturas optativas</td>
-		<td><center>24<center></center></center></td>
-    	<td>Optativas</td>
-	</tr>           
-</tbody></table><p>&nbsp;</p><h5 id='segundo-cuatrimestre-3'><span>Segundo cuatrimestre</span></h5><table>  
-	<tbody><tr style="background-color: rgb(0, 147, 255);">
-    	<th width="60%" style="color:#FFFFFF">Asignaturas</th>
-    	<th width="20%" style="color:#FFFFFF"><center>Créditos<center></center></center></th>
-    	<th width="20%" style="color:#FFFFFF">Carácter</th>
-	</tr>       
-    <tr>    
-        <td><a href="3-Curso/Segundo_cuatrimestre/Ingenieria_del_software_avanzada/Indice_ingenieria_del_software_avanzada.html">Ingeniería del software avanzada</a></td>
-		<td><center>6<center></center></center></td>
-    	<td>Obligatoria</td>
-    </tr>    
-    <tr>    
-        <td>Asignaturas optativas</td>
-		<td><center>24<center></center></center></td>
-    	<td>Optativas</td>
-	</tr>           
-</tbody></table><p>&nbsp;</p><p>&nbsp;</p><h3 id='cuarto-año---60etcs'><span>Cuarto año - 60ETCS</span></h3><table>  
-	<tbody><tr style="background-color: rgb(0, 147, 255);">
-    	<th width="60%" style="color:#FFFFFF">Asignaturas</th>
-    	<th width="20%" style="color:#FFFFFF"><center>Créditos<center></center></center></th>
-    	<th width="20%" style="color:#FFFFFF">Carácter</th>
-	</tr>         
-    <tr>    
-        <td>Trabajo Final de Grado</td>
-		<td><center>12<center></center></center></td>
-    	<td>Fin de grado</td>
-    </tr>    
-    <tr>    
-        <td>Asignaturas optativas</td>
-		<td><center>48<center></center></center></td>
-    	<td>Optativas</td>
-	</tr>           
-</tbody></table><p>&nbsp;</p><p>&nbsp;</p><h3 id='menciones'><span>Menciones</span></h3><h5 id='mención-computación'><span>Mención Computación</span></h5><table>  
-	<tbody><tr style="background-color: rgb(0, 147, 255);">
-    	<th width="60%" style="color:#FFFFFF">Asignaturas</th>
-    	<th width="20%" style="color:#FFFFFF"><center>Créditos<center></center></center></th>
-    	<th width="20%" style="color:#FFFFFF">Carácter</th>
-	</tr>   
-    <tr>
-        <td>Teoría de la Computación</td>
-    	<td><center>6<center></center></center></td>
-        <td>Optativa</td>
-    </tr>               
-    <tr>
-        <td>Programación Declarativa</td>
-    	<td><center>6<center></center></center></td>
-        <td>Optativa</td>
-    </tr>              
-    <tr>
-        <td>Diseño avanzado de algoritmos</td>
-    	<td><center>6<center></center></center></td>
-        <td>Optativa</td>
-    </tr>            
-    <tr>
-        <td>Sistemas inteligentes</td>
-    	<td><center>6<center></center></center></td>
-        <td>Optativa</td>
-    </tr>
-    <tr>    
-        <td>Procesadores de lenguajes</td>
-		<td><center>6<center></center></center></td>
-    	<td>Optativa</td>
-    </tr>    
-    <tr>    
-        <td>Informática gráfica y visualización</td>
-		<td><center>6<center></center></center></td>
-    	<td>Optativa</td>
-    </tr>    
-    <tr>    
-        <td>Aprendizaje automático y minería de datos</td>
-		<td><center>6<center></center></center></td>
-    	<td>Optativa</td>
-    </tr>    
-    <tr>    
-        <td>Sistemas multiagente y percepción computacional</td>
-		<td><center>6<center></center></center></td>
-    	<td>Optativa</td>
-	</tr>           
-</tbody></table><p>&nbsp;</p><h5 id='mención-ingeniería-del-software'><span>Mención ingeniería del software</span></h5><table>  
-	<tbody><tr style="background-color: rgb(0, 147, 255);">
-    	<th width="60%" style="color:#FFFFFF">Asignaturas</th>
-    	<th width="20%" style="color:#FFFFFF"><center>Créditos<center></center></center></th>
-    	<th width="20%" style="color:#FFFFFF">Carácter</th>
-	</tr>     
-    <tr>
-        <td>Seguridad en los sistemas de información</td>
-    	<td><center>6<center></center></center></td>
-        <td>Optativa</td>
-    </tr>               
-    <tr>
-        <td>Bases de datos avanzadas</td>
-    	<td><center>6<center></center></center></td>
-        <td>Optativa</td>
-    </tr>              
-    <tr>
-        <td>Ingeniería de requisitos</td>
-    	<td><center>6<center></center></center></td>
-        <td>Optativa</td>
-    </tr>            
-    <tr>
-        <td>Desarrollo de aplicaciones en red</td>
-    	<td><center>6<center></center></center></td>
-        <td>Optativa</td>
-    </tr>
-    <tr>    
-        <td>Procesos en ingeniería del software</td>
-		<td><center>6<center></center></center></td>
-    	<td>Optativa</td>
-    </tr>    
-    <tr>    
-        <td>Tecnologías emergentes</td>
-		<td><center>6<center></center></center></td>
-    	<td>Optativa</td>
-    </tr>    
-    <tr>    
-        <td>Calidad y auditoría de sistemas de información</td>
-		<td><center>6<center></center></center></td>
-    	<td>Optativa</td>
-    </tr>    
-    <tr>    
-        <td>Integración de sistemas</td>
-		<td><center>6<center></center></center></td>
-    	<td>Optativa</td>
-	</tr>           
-</tbody></table>        <p>&nbsp;</p><h5 id='módulo-de-optatividad'><span>Módulo de optatividad</span></h5><table>  
-	<tbody><tr style="background-color: rgb(0, 147, 255);">
-    	<th width="60%" style="color:#FFFFFF">Asignaturas</th>
-    	<th width="20%" style="color:#FFFFFF"><center>Créditos<center></center></center></th>
-    	<th width="20%" style="color:#FFFFFF">Carácter</th>
-	</tr>    
-    <tr>
-        <td>Reutilización de software</td>
-    	<td><center>6<center></center></center></td>
-        <td>Optativa</td>
-    </tr>               
-    <tr>
-        <td>Servicios de tecnología de la información</td>
-    	<td><center>6<center></center></center></td>
-        <td>Optativa</td>
-    </tr>              
-    <tr>
-        <td>Computación bioinspirada</td>
-    	<td><center>6<center></center></center></td>
-        <td>Optativa</td>
-    </tr>            
-    <tr>
-        <td>Prácticas en empresa</td>
-    	<td><center>12<center></center></center></td>
-        <td>Optativa</td>
-    </tr>           
-</tbody></table></div></div>
+<body class="bg-img body-bg">
+	<div class="canvas-area">
+		<canvas class="constellation"></canvas>
+	</div>
+	<!-- PREALODER START -->
+	<div class="preloader-wrap">
+		<div class="preloader">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+	</div>
+	<!-- PREALODER END -->
+	<!-- SHAPE START -->
+	<div class="shape-1"><img src="img/shape-1.png" alt="" /></div>
+	<div class="shape-2"><img src="img/shape-2.png" alt="" /></div>
+	<div class="shape-3"><img src="img/shape-3.png" alt="" /></div>
+	<!-- SHAPE END -->
+
+	<div class="bg-img color-white main-container">
+		<!-- HEADER PART START -->
+		<div id="header" class="style-1">
+			<div class="container">
+				<nav class="navbar navbar-expand-lg">
+					<a class="navbar-brand" href="#"><img src="img/logo.png" alt="" /></a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="icofont icofont-navigation-menu"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<ul class="nav nav-pills mx-auto nav-style1" id="pills-tab" role="tablist">
+							<li class="nav-item" role="presentation"><a class="nav-link nav-menu active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Inicio</a></li>
+							<li class="nav-item" role="presentation"><a class="nav-link nav-menu" id="pills-about-tab" data-toggle="pill" href="#pills-about" role="tab" aria-controls="pills-about" aria-selected="false">Sobre Nosotros</a></li>
+							<li class="nav-item" role="presentation"><a class="nav-link nav-menu" href="contenido/contenido.html" target="_blank" role="tab" aria-selected="false">Contenido</a></li>
+							<li class="nav-item" role="presentation"><a class="nav-link nav-menu" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Contacto</a>
+							</li>
+						</ul>
+					</div>
+					<div class="head-contact-us">
+						<span>+34 686 708 418</span>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<!-- HEADER PART END -->
+
+		<!-- BODY PART START -->
+		<div class="tab-content" id="pills-tabContent">
+			<!-- HOME PART -->
+			<div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+				<div id="main-content-home" class="xs-no-positioning fixed fixed-middle">
+					<div>
+						<div class="container">
+							<div class="row">
+								<div class="col-12">
+									<div class="title">
+										<p class="small-title">Nuestro nuevo sitio web está en camino.</p>
+										<span class="main-title">Comenzamos pronto</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="container">
+							<div class="row justify-content-center">
+								<div class="col-sm-12 col-md-10 col-lg-7 col-xl-7">
+									<div class="counter-style1">
+										<input type="hidden" id="count-down-date" name="count-down-date" value="15 Oct, 2022 12:00:00" />
+										<h2 class="expired-text hidden">Bienvenido a nuestra WEB</h2>
+										<div class="countdown-timer" id="countdown-boxes">
+											<ul class="list-inline count-down-list text-center">
+												<li id="days"><span class="days">30</span><span class="counter-time-title">Dias</span></li>
+												<li id="hours"><span class="hours">24</span><span class="counter-time-title">Horas</span></li>
+												<li id="minutes"><span class="minutes">50</span><span class="counter-time-title">Minutos</span></li>
+												<li id="seconds"><span class="seconds">55</span><span class="counter-time-title">Segundos</span></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="subscribe-form">
+							<div class="container">
+								<div class="row justify-content-center">
+									<div class="col-xs-12 col-sm-12 col-md-8 col-lg-6 col-xl-6 text-center">
+										<div class="subscribe-form text-center">
+											<form action="#" class="form-inline mx-auto">
+												<input type="email" name="email" class="form-control btn-rounded" placeholder="E-mail" />
+												<button type="submit" class="btn btn-primary btn-round">
+													<span class="btn-text">Subscríbete</span> <span><i class="btn-icon icofont icofont-paper-plane"></i></span>
+												</button>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- ABOUT PART -->
+			<div class="tab-pane fade" id="pills-about" role="tabpanel" aria-labelledby="pills-about-tab">
+				<div id="main-content-about" class="xs-no-positioning fixed fixed-middle">
+					<div class="container">
+						<div class="row align-items-center">
+							<div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+								<div class="about_img">
+									<img class="w-100" src="img/about-team.png" alt="" />
+									<div class="border-shape"></div>
+									<div class="badge"><img class="w-100" src="img/badge.png" alt="" /></div>
+								</div>
+							</div>
+							<div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+								<div class="title text-left">
+									<span class="about-small-title">Sobre Nosotros</span>
+									<h1 class="about-main-title">Solamente somos unos estudiantes muy intensos.</h1>
+								</div>
+								<div class="content-text">
+									<p class="first-pera">Consectetur adipiscing elit, sed do eusmod tempor incedunt laboe and nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+									<p class="second-pera">
+										Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea com modo consequat. Duis aute irure
+										dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatu.
+									</p>
+									<p class="third-pera">
+										Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea com modo consequat. Duis aute irure
+										dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatu.
+									</p>
+									<div class="contact-btn">
+										<button type="button" class="btn btn-primary btn-sm">Contactanos <i class="icofont icofont-swoosh-right"></i></button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- CONTACT PART -->
+			<div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+				<div id="main-content-contact" class="xs-no-positioning fixed fixed-middle">
+					<div class="container">
+						<div class="row">
+							<div class="col-12">
+								<div class="title">
+									<p class="contact-small-title">Contacto</p>
+									<span class="contact-main-title">AYUDANOS A MEJORAR</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="container">
+						<div class="row justify-content-center">
+							<div class="col-12">
+								<div class="contact-form-main-div">
+									<form id="contact-form" action="#" class="clearfix text-center">
+										<div class="row">
+											<div class="success">Su mensaje ha sido enviado.</div>
+											<div class="error">Introduzca una dirección de E-mail válida y rellene el mensaje.</div>
+											<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 form-field">
+												<input type="text" id="name" name="name" class="form-control" placeholder="Nombre completo" /><i class="icofont icofont-user"></i>
+											</div>
+											<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 form-field">
+												<input type="email" id="email_address" name="email" class="form-control" placeholder="E-mail" /><i class="icofont icofont-envelope"></i>
+											</div>											
+											<div class="col-md-12 col-lg-12 col-xl-12 form-field"><textarea id="message" name="message" class="form-control" placeholder="Mensaje" rows="7"></textarea></div>
+										</div>
+										<button type="submit" name="submit" id="submit" class="btn btn-primary">Enviar mensaje <i class="icofont icofont-arrow-right"></i></button>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- BODY PART END -->
+	</div>
+	<!-- SOCIAL ICON PART START -->
+	<!––	<div class="social-icon-box text-center">
+		<ul class="list-inline social-icons social-icons-body">
+			<li>
+				<a href="#" target="_blank" class=""><i class="icofont icofont-social-facebook"></i></a>
+			</li>
+			<li>
+				<a href="#" target="_blank" class=""><i class="icofont icofont-social-twitter"></i></a>
+			</li>
+			<li>
+				<a href="#" target="_blank" class=""><i class="icofont icofont-social-google-plus"></i></a>
+			</li>
+		</ul>
+	</div>––>
+	<!-- SOCIAL ICON PART END -->
+	
+	<!-- jQuery -->
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<!-- Bootstrap JS -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- zepto JS -->
+	<script src="js/zepto.min.js"></script>
+	<!-- constellation JS -->
+	<script src="js/constellation.min.js"></script>
+	<!-- stars JS -->
+	<script src="js/stars.js"></script>
+	<!-- scripts -->
+	<script src="js/scripts.js"></script>
+
+	<script>
+		$('.canvas-area canvas').constellation({
+			star: {
+				width: 3
+			},
+			line: {
+				color: 'rgba(255,255,255,0.7)'
+			},
+			length: (window.innerWidth / 9),
+			radius: (window.innerWidth / 5)
+		});
+	</script>
 </body>
 </html>
