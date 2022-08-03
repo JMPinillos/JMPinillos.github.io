@@ -705,7 +705,7 @@ ul.style2-nav li:hover .nav-menu {
     font-size: 40px;
     font-weight: 700;
     color: #fff;
-    text-transform: capitalize;
+    text-transform: none;
     font-family: "Playfair Display", serif;
     position: relative;
     display: block;
