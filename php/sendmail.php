@@ -6,9 +6,9 @@
   $message = @trim(stripslashes($_POST['message'])); 
 
   $email_from = $email;
-  $email_to = 'envalabteam@gmail.com'; //replace with your email
+  $email_to = 'pinillosrubio@gmail.com'; //replace with your email
 
-  $message = 'Name: ' . $name . "\n\n" . 'Email: ' . $email . "\n\n" . 'Message: ' . $message;
+  $message = 'Nombre: ' . $name . "\n\n" . 'Email: ' . $email . "\n\n" . 'Message: ' . $message;
 
   $success = @mail($email_to, "[KasCo Landing] ".$name, $message);
 
