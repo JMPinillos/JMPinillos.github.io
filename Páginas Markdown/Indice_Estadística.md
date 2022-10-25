@@ -1,4 +1,4 @@
-# Álgebra y Matemática discreta (2020-2021)
+# Estadística (2020-2021)
 
 
 
