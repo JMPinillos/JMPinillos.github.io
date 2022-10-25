@@ -14,6 +14,4 @@
     </tr>     
 </table>
 
-
-
 Si alguien lo pasa a ***word*** o a ***markdown*** que nos lo haga llegar para actualizarlo y poder seguir mejorando la página.

@@ -124,6 +124,7 @@ Aquí encontraras los resúmenes para que comprendas los conceptos esenciales de
 
 
 
+
 ##### Segundo cuatrimestre
 
 <table>  
@@ -174,7 +175,7 @@ Aquí encontraras los resúmenes para que comprendas los conceptos esenciales de
     	<th width="20%" style="color:#FFFFFF">Carácter</th>
 	</tr>        
     <tr>    
-        <td>Gestión de proyectos</td>
+        <td><a href="3-Curso/Primer_cuatrimestre/Gestión de proyectos/Indice_Gestión_de_proyectos.html">Gestión de proyectos</a></td>
 		<td><center>6<center></td>
     	<td>Obligatoria</td>
     </tr>    
@@ -184,6 +185,7 @@ Aquí encontraras los resúmenes para que comprendas los conceptos esenciales de
     	<td>Optativas</td>
 	</tr>           
 </table>
+
 
 
 ##### Segundo cuatrimestre
