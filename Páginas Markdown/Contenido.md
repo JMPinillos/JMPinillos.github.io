@@ -15,7 +15,7 @@ Aquí encontraras los resúmenes para que comprendas los conceptos esenciales de
     	<th width="20%" style="color:#FFFFFF">Carácter</th>
 	</tr>   
     <tr>
-        <td>Álgebra y Matemática Discreta</td>
+        <td><a href="1-Curso/Primer_cuatrimestre/Algebra_y_Matemática_discreta/Indice_Algebra_y_Matemática_discreta.html">Álgebra y Matemática Discreta</a></td>
     	<td><center>6<center></td>
         <td>Básica</td>
     </tr>
