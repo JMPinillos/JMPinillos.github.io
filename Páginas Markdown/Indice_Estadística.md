@@ -7,7 +7,8 @@
     	<th width="60%" style="color:#FFFFFF">RESUMENES</th>
 	</tr>   
     <tr>
-		<td><a href="Resumenes/Álgebra y Matemática discreta.pdf">RESUMEN A MANO</a></td>
+		<td><a href="Resumenes/Estadística.pdf">RESUMEN A MANO</a> by Jose Manuel Pinillos</td>
 </table>
+
 
 Si alguien lo pasa a ***word*** o a ***markdown*** que nos lo haga llegar para actualizarlo y poder seguir mejorando la página.
