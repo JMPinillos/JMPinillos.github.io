@@ -91,7 +91,7 @@ Aquí encontraras los resúmenes para que comprendas los conceptos esenciales de
     	<th width="20%" style="color:#FFFFFF">Carácter</th>
 	</tr>    
     <tr>
-        <td>Estadística</td>
+        <td><a href="2-Curso/Primer_cuatrimestre/Estadística/Indice_Estadística.html">Estadística</a></td>
     	<td><center>6<center></td>
         <td>Básica</td>
     </tr>            
@@ -121,6 +121,7 @@ Aquí encontraras los resúmenes para que comprendas los conceptos esenciales de
     	<td>Obligatoria</td>
 	</tr>
 </table>
+
 
 
 ##### Segundo cuatrimestre
