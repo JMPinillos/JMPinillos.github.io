@@ -96,7 +96,7 @@ Aquí encontraras los resúmenes para que comprendas los conceptos esenciales de
         <td>Básica</td>
     </tr>            
     <tr>
-        <td><a href="2-Curso/Primer_cuatrimestre/Estructura de datos/Indice_Estructura de datos.html">Estructura de datos</a></td>
+        <td><a href="2-Curso/Primer_cuatrimestre/Estructura de datos/Indice_Estructura_de_datos.html">Estructura de datos</a></td>
     	<td><center>6<center></td>
         <td>Obligatoria</td>
     </tr>
@@ -106,7 +106,7 @@ Aquí encontraras los resúmenes para que comprendas los conceptos esenciales de
     	<td>Obligatoria</td>
     </tr>    
     <tr>    
-        <td><a href="2-Curso/Primer_cuatrimestre/Ingeniería del software/Indice_Ingeniería del software.html">Ingeniería del software</a></td>
+        <td><a href="2-Curso/Primer_cuatrimestre/Ingeniería del software/Indice_Ingeniería_del_software.html">Ingeniería del software</a></td>
 		<td><center>6<center></td>
     	<td>Obligatoria</td>
     </tr>    
