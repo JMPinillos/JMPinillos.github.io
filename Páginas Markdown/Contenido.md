@@ -56,7 +56,7 @@ Aquí encontraras los resúmenes para que comprendas los conceptos esenciales de
         <td>Obligatoria</td>
     </tr>
     <tr>    
-        <td><a href="2-Curso/Primer_cuatrimestre/Lógica Computacional/Indice_Lógica_Computacional.html">Lógica Computacional</a></td>
+        <td><a href="1-Curso/Segundo_cuatrimestre/Lógica Computacional/Indice_Logica_Computacional.html">Lógica Computacional</a></td>
 		<td><center>6<center></td>
     	<td>Básica</td>
     </tr>    
@@ -66,7 +66,7 @@ Aquí encontraras los resúmenes para que comprendas los conceptos esenciales de
     	<td>Básica</td>
     </tr>    
     <tr>    
-        <td><a href="2-Curso/Primer_cuatrimestre/Algoritmia y Complejidad/Indice_Algoritmia_y_complegidad.html">Algoritmia y Complejidad</a></td>
+        <td><a href="1-Curso/Segundo_cuatrimestre/Algoritmia y Complejidad/Indice_Algoritmia_y_complejidad.html">Algoritmia y Complejidad</a></td>
 		<td><center>6<center></td>
     	<td>Básica</td>
     </tr>    
@@ -76,6 +76,7 @@ Aquí encontraras los resúmenes para que comprendas los conceptos esenciales de
     	<td>Básica</td>
 	</tr>
 </table>
+
 
 
 
